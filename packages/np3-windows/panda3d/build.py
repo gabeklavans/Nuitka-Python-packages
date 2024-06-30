@@ -23,9 +23,9 @@ def run(req: InstallRequirement,
     __np__.setup_compiler_env()
 
     os.chdir(source_dir)
-
-    __np__.run_build_tool_exe("patch", "patch.exe", "--binary", "-p1", "-i",
-                              os.path.join(os.path.dirname(__file__), "Implement_static_python_build.patch"))
+    #
+    # __np__.run_build_tool_exe("patch", "patch.exe", "--binary", "-p1", "-i",
+    #                           os.path.join(os.path.dirname(__file__), "Implement_static_python_build.patch"))
 
     os.makedirs(os.path.join("thirdparty", "win-libs-vc14-x64"), exist_ok=True)
 
