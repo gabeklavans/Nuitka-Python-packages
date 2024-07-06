@@ -34,7 +34,7 @@
   "sources": [
     {
       "version":"1.11.0",
-      "link": "./panda.zip"
+      "link": "file:///home/clash/panda.zip"
     }
   ]
 }
