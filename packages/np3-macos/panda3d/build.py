@@ -64,5 +64,5 @@ def run(req: InstallRequirement,
     os.environ["CFLAGS"] = "-flto=thin"
 
     print("--everything", "--wheel", "--static", f"--python-libdir={sys.prefix}/lib", f"--python-incdir={sys.prefix}/include", "--threads=8", "--optimize=4")
-    __np__.run_with_output(sys.executable, os.path.join(source_dir, "makepanda", "makepanda.py"), "--everything", "--wheel", "--static", f"--python-libdir={sys.prefix}/lib", f"--python-incdir={sys.prefix}/include", "--threads=8", "--optimize=4")
+    __np__.run_with_output(sys.executable, os.path.join(source_dir, "makepanda", "makepanda.py"), "--everything", "--wheel", "--static", f"--python-libdir={sys.prefix}/lib", f"--python-incdir={sys.prefix}/include", "--threads=8", "--optimize=4", "--no-pandatool", "--no-mimalloc", "--no-eigen", "--no-pview", "--no-tinydisplay", "--no-openexr", "--no-fmodex")
     __np__.run_with_output(sys.executable, "-m", "pip", "install", glob.glob("panda3d*.whl")[0], "--force-reinstall")
