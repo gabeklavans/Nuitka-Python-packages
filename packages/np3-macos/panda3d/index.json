@@ -25,8 +25,7 @@
         "vorbis"
       ],
       "files": [
-        "build.py",
-        "Implement_static_build.patch"
+        "build.py"
       ],
       "build_script": "build.py"
     }

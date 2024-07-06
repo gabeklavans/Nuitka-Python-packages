@@ -23,9 +23,6 @@ def run(req: InstallRequirement,
 
     os.chdir(source_dir)
 
-    __np__.run_with_output("patch", "--binary", "-p1", "-i",
-                              os.path.join(os.path.dirname(__file__), "Implement_static_build.patch"))
-
     os.makedirs(os.path.join("thirdparty", "darwin-libs-a"), exist_ok=True)
 
     shutil.copytree(__np__.find_dep_root("bullet"), os.path.join("thirdparty", "darwin-libs-a", "bullet"))
