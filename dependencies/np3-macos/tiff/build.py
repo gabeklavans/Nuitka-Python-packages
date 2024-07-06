@@ -20,6 +20,7 @@ def run(temp_dir: str):
     __np__.run_build_tool_exe("cmake", "cmake", "-G", "Ninja",
                               "-DCMAKE_BUILD_TYPE=Release", "-DBUILD_SHARED_LIBS=OFF",
                               "-Djbig=OFF",
+                              "-Dzstd=OFF",
                               "-DZLIB_ROOT=" + __np__.find_dep_root("zlib"),
                               src_dir)
     __np__.run_build_tool_exe("ninja", "ninja")
